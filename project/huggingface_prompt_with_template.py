@@ -1,6 +1,10 @@
 import gradio as gr
 from langchain.prompts import PromptTemplate
 from langchain_community.llms import Cohere
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 
 # initialize the models

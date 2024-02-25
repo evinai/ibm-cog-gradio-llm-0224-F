@@ -7,9 +7,13 @@ from langchain.memory import ConversationBufferWindowMemory, CombinedMemory, Con
 import os
 import gradio as gr
 import time
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # Set up OpenAI API key
-# openai_api_key = "YOUR API KEY"  # Replace with your API key
+# openai_api_key = os.getenv("OPENAI_API_KEY")  # Replace with your API key
 # os.environ["OPENAI_API_KEY"] = openai_api_key
 
 cohere = Cohere(model='command-xlarge')

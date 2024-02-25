@@ -2,10 +2,14 @@ import os
 from langchain_community.llms import Cohere
 #from langchain.chat_models import ChatOpenAI
 import gradio as gr
+from dotenv import load_dotenv
+from langchain.llms import OpenAI
+load_dotenv()
 
 # with openai
 # # assign API key
-# os.environ["OPENAI_API_KEY"] = "YOUR API KEY"
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
 
 # gpt3 = OpenAI(model_name="text-ada-001" )
 

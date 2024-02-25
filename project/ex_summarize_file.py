@@ -4,6 +4,8 @@ from langchain.indexes import VectorstoreIndexCreator
 import wget
 import os
 import gradio as gr
+from dotenv import load_dotenv
+load_dotenv()
 
 # link to a text document
 url = "https://raw.githubusercontent.com/hwchase17/chat-your-data/master/state_of_the_union.txt"
@@ -17,7 +19,8 @@ if not os.path.exists(output_path):
 loader = TextLoader('state_of_the_union.txt')
 
 ## NEED OPENAI KEY
-openai_api_key = "YOUR API KEY"
+
+openai_api_key = os.getenv("OPENAI_API_KEY")
 os.environ["OPENAI_API_KEY"] = openai_api_key
 
 
@@ -33,3 +36,6 @@ def summarize(query):
 
 iface = gr.Interface(fn=summarize, inputs="text", outputs="text")
 iface.launch(server_name="0.0.0.0", server_port= 7860)
+
+## Q: when was independence declared?
+## A: ->from gradio  The United States declared independence on July 4, 1776.

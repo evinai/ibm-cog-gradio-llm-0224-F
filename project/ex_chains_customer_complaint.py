@@ -3,16 +3,19 @@ from langchain.chains import LLMChain
 from langchain.llms import Cohere
 from langchain.prompts import PromptTemplate
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 # setting up the LLM
 
-# os.environ["OPENAI_API_KEY"] = "YOUR API KEY"
+#openai_api_key = os.getenv("OPENAI_API_KEY")
+# os.environ["OPENAI_API_KEY"] = openai_api_key
 # llm = OpenAI(temperature=0.9)
 
 # from langchain_community.llms import HuggingFaceEndpoint
 
-
-# os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+# Huggingface = os.getenv("HUGGING_FACE_API_TOKEN")
+# os.environ["HUGGINGFACEHUB_API_TOKEN"] = Huggingface
 # llm = HuggingFaceEndpoint(repo_id="google/gemma-7b")
 
 cohere = Cohere(model='command-xlarge')

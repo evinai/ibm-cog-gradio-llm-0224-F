@@ -2,9 +2,13 @@ import gradio as gr
 from langchain.prompts import PromptTemplate
 import os
 from langchain.llms import OpenAI
+from dotenv import load_dotenv
 
-openai_api_key = "YOUR API KEY"
-os.environ["OPENAI_API_KEY"] = openai_api_key
+load_dotenv() # load environment variables from .env file
+
+
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
 
 # initialize the models
 llm = OpenAI(
