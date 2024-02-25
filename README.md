@@ -19,3 +19,7 @@ Conversation Chains: Enables creation of complex dialogues with LLMs.
 Memory Interface: Facilitates storing and retrieving model information.
 Indexes: Utility functions for loading custom text data.
 Agents and Tools: Allows setting up agents that can use tools like Google Search, Wikipedia, or a calculator.
+
+
+
+docker run -p 8001:7860 --rm --name gradio_llm -it gradio_llm
