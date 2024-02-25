@@ -16,8 +16,8 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 # with Huggingface
 # from langchain import HuggingFaceHub
 
-
-# os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+hugging_face_api = os.getenv("HUGGING_FACE_API_TOKEN")
+# os.environ["HUGGING_FACE_API_TOKEN"] = hugging_face_api
 # llm = HuggingFaceHub(repo_id="google/gemma-7b")
 # text = "tell me insteresting fact about potato"
 

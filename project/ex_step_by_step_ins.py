@@ -5,12 +5,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-HUGGING_FACE_API_TOKEN = os.getenv("HUGGING_FACE_API_TOKEN")
 
 from langchain import HuggingFaceHub
 
-
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = HUGGING_FACE_API_TOKEN
+hugging_face_api = os.getenv("HUGGING_FACE_API_TOKEN")
+os.environ["HUGGING_FACE_API_TOKEN"] = hugging_face_api
 llm = HuggingFaceHub(repo_id="google/gemma-7b")
 
 

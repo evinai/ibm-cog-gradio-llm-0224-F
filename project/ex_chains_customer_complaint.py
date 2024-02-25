@@ -15,7 +15,7 @@ load_dotenv()
 # from langchain_community.llms import HuggingFaceEndpoint
 
 # Huggingface = os.getenv("HUGGING_FACE_API_TOKEN")
-# os.environ["HUGGINGFACEHUB_API_TOKEN"] = Huggingface
+# os.environ["HUGGING_FAC_API_TOKEN"] = Huggingface
 # llm = HuggingFaceEndpoint(repo_id="google/gemma-7b")
 
 cohere = Cohere(model='command-xlarge')

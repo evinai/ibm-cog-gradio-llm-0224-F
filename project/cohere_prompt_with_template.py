@@ -1,12 +1,15 @@
 import gradio as gr
 from langchain.prompts import PromptTemplate
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
 from langchain import HuggingFaceHub
 
+hugging_face_api = os.environ["HUGGING_FACE_API_TOKEN"]
 
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGING_FACEHUB_API_TOKEN"] = hugging_face_api
 llm = HuggingFaceHub(repo_id="google/gemma-7b")
 
 
